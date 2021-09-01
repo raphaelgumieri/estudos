@@ -1,0 +1,19 @@
+É um superset do JS;
+adiciona novas features ao JS;
+Basicamente, tipagem estática
+  quando é definido os tipos das variaveis, retornos de funções, etc;
+Compila para JS;
+Permite adoção gradual (arquivos com .ts convivem com .js);
+Não tem diferença entre a criação de funções/etc do js;
+
+
+Por que usar TS?
+Evita resultados inesperados
+Avisa se estiver fazendo algo errado
+Já funciona como uma espécie de documentação
+Deixa sua IDE extremamente poderosa
+
+Desvantagens do TS
+Necessita ser compilado (mais passos no tooling)
+Aprendizado inicial dos tipos e boas práticas
+Erros nem sempre muito claros ou então muito grandes

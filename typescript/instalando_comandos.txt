@@ -1,0 +1,12 @@
+https://www.typescriptlang.org/
+
+npm i -g typescript
+npm install typescript --save-dev
+
+compilar o arquivo p js: npx tsc nome_do_arquivo.ts
+
+compilar o arquivo p js e "assistir": npx tsc nome_do_arquivo.ts --watch
+
+adicionar configurações: npx tsc --init
+
+para compilar com base nas regras do tsconfing.json: npx tsc
