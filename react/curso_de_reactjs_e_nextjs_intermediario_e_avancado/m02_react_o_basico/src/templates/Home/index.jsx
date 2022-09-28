@@ -60,9 +60,11 @@ export default class Home extends Component {
           <TextInput handleChange={handleChange} searchValue={searchValue} />
         </div>
 
-        {filteredPosts.length > 0 && <Posts posts={filteredPosts} />}
-
-        {filteredPosts.length === 0 && <p>Não existem posts =(</p>}
+        {filteredPosts.length > 0 ? (
+          <Posts posts={filteredPosts} />
+        ) : (
+          <p>Não existem posts =(</p>
+        )}
 
         <div className="button-container">
           {!searchValue && (
