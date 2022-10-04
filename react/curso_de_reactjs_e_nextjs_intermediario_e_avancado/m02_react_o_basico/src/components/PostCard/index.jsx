@@ -1,4 +1,6 @@
-import './styles.css';
+/* eslint-disable react/react-in-jsx-scope */
+import P from "prop-types";
+import "./styles.css";
 
 export const PostCard = ({ post }) => (
   <div className="post">
@@ -9,3 +11,11 @@ export const PostCard = ({ post }) => (
     </div>
   </div>
 );
+
+PostCard.propTypes = {
+  post: P.shape({
+    cover: P.string.isRequired,
+    title: P.string.isRequired,
+    body: P.string.isRequired,
+  }).isRequired,
+};

@@ -1,3 +1,5 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable no-undef */
 import { render, screen } from "@testing-library/react";
 import { Posts } from ".";
 
@@ -23,14 +25,14 @@ describe("<Posts />", () => {
   };
 
   it("should match snapshot", () => {
-    const view = render(<Posts {...props} />);
+    const view = render(<Posts posts={props.posts} key={props.posts.index} />);
 
     expect(view).toMatchSnapshot();
   });
 
   it("should render posts", () => {
     render(<Posts {...props} />);
-    
+
     const arrHeadings = screen.getAllByRole("heading", { name: /title/i });
     const arrImgs = screen.getAllByRole("img", { name: /title/i });
     const arrBodies = screen.getAllByText(/body/i);
