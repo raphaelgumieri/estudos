@@ -5,14 +5,14 @@ function App() {
   const [counter, setCounter] = useState(0);
 
   // componentDidUpdate
-  useEffect(() => {
-    console.log('ComponentDidUpdate');
-  });
+  // useEffect(() => {
+  //   console.log('ComponentDidUpdate');
+  // });
 
   // componentDidMount
-  useEffect(() => {
-    console.log('ComponentDidMount');
-  }, []);
+  // useEffect(() => {
+  //   console.log('ComponentDidMount');
+  // }, []);
 
   // com dependencia - executa toda vez que a dependencia mudar
   useEffect(() => {
