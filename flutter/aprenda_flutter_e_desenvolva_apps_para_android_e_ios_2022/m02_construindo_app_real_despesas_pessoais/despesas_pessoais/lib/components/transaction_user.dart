@@ -1,7 +1,4 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-
 import '../models/transaction.dart';
 import 'transaction_form.dart';
 import 'transaction_list.dart';
@@ -27,7 +24,7 @@ class _TransactionUserState extends State<TransactionUser> {
     )
   ];
 
-  _addTransaction({required String title, required double value}) {
+  _addTransaction(String title, double value) {
     final newTransaction = Transaction(
       id: (_transactions.length + 1).toString(),
       title: title,
@@ -45,7 +42,7 @@ class _TransactionUserState extends State<TransactionUser> {
     return Column(
       children: <Widget>[
         TransactionList(_transactions),
-        TransactionForm(),
+        TransactionForm(_addTransaction),
       ],
     );
   }
